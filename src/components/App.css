@@ -1,0 +1,29 @@
+*{
+  margin:0;
+  padding:0
+}
+body{
+background: linear-gradient(90deg, rgba(147,123,133,0.5) 4%, rgba(233,172,148,0.3337710084033614) 100%);
+
+  /* background-position: center; */
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+  /* content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  opacity: 1;
+   */
+}
+.App {
+  text-align: center;
+width:300px;
+
+margin:0 auto;
+
+
+
+}
