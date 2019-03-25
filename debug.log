@@ -4,3 +4,6 @@
 [0324/144446.019:ERROR:file_io_win.cc(179)] CreateFile C:\Users\Bartosz KamiÅ„ski\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: Odmowa dostêpu. (0x5)
 [0324/144446.094:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
 [0324/144446.141:ERROR:file_io_win.cc(179)] CreateFile C:\Users\Bartosz KamiÅ„ski\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: Odmowa dostêpu. (0x5)
+[0324/203142.703:ERROR:file_io_win.cc(179)] CreateFile C:\Users\Bartosz KamiÅ„ski\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: Odmowa dostêpu. (0x5)
+[0324/203142.834:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
+[0324/203142.905:ERROR:file_io_win.cc(179)] CreateFile C:\Users\Bartosz KamiÅ„ski\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: Odmowa dostêpu. (0x5)
