@@ -39,14 +39,14 @@ const Result = (props) => {
                                 <div className="day">{props.data.forecast[0].day}</div>
                             </div>
                             <div className="tempForecast"> {props.data.forecast[0].temp} &#8451;</div>
-                            <div className="icon"><img src={img} alt="zdjęcie obrazujące pogode" /></div>
+                            <div className="icon"><img src={props.data.forecast[0].img} alt="zdjęcie obrazujące pogode" /></div>
                         </div>
                         <div className="panel">
                             <div className="hourDay">
                                 <div className="hour">{props.data.forecast[1].time}</div>
                                 <div className="day">{props.data.forecast[1].day}</div>
                                 <div className="tempForecast"> {props.data.forecast[1].temp} &#8451;</div>
-                                <div className="icon"><img src={img} alt="zdjęcie obrazujące pogode" /></div>
+                                <div className="icon"><img src={props.data.forecast[1].img} alt="zdjęcie obrazujące pogode" /></div>
                             </div>
                         </div>
                         <div className="panel">
@@ -54,7 +54,7 @@ const Result = (props) => {
                                 <div className="hour">{props.data.forecast[2].time}</div>
                                 <div className="day">{props.data.forecast[2].day}</div>
                                 <div className="tempForecast"> {props.data.forecast[2].temp} &#8451;</div>
-                                <div className="icon"><img src={img} alt="zdjęcie obrazujące pogode" /></div>
+                                <div className="icon"><img src={props.data.forecast[2].img} alt="zdjęcie obrazujące pogode" /></div>
                             </div>
                         </div>
                         <div className="panel">
@@ -62,7 +62,7 @@ const Result = (props) => {
                                 <div className="hour">{props.data.forecast[3].time}</div>
                                 <div className="day">{props.data.forecast[3].day}</div>
                                 <div className="tempForecast"> {props.data.forecast[3].temp} &#8451;</div>
-                                <div className="icon"><img src={img} alt="zdjęcie obrazujące pogode" /></div>
+                                <div className="icon"><img src={props.data.forecast[3].img} alt="zdjęcie obrazujące pogode" /></div>
                             </div>
                         </div>
                         <div className="panel">
@@ -70,7 +70,7 @@ const Result = (props) => {
                                 <div className="hour">{props.data.forecast[4].time}</div>
                                 <div className="day">{props.data.forecast[4].day}</div>
                                 <div className="tempForecast"> {props.data.forecast[4].temp} &#8451;</div>
-                                <div className="icon"><img src={img} alt="zdjęcie obrazujące pogode" /></div>
+                                <div className="icon"><img src={props.data.forecast[4].img} alt="zdjęcie obrazujące pogode" /></div>
                             </div>
                         </div>
 
