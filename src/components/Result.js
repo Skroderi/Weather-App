@@ -4,17 +4,16 @@ import './Result.css';
 import Forecast from './Forecast';
 
 const Result = (props) => {
-    const { date, city, temp, img, country, humidity, description, pressure, wind, error } = props.data.current[0]
+    const { date, city, temp, img, country, humidity, description, pressure, wind, error } = props.data.current[0];
 
-
-
-    const forecasts = props.data.forecast.map(forecast => <Forecast temp={forecast.main.temp} day={forecast.dt} time={forecast.dt} img={`https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`} />)
+    const forecasts = props.data.forecast.map((forecast, index) => <Forecast key={index} temp={forecast.main.temp} day={forecast.dt} time={forecast.dt} img={`https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`} />);
 
     const errorMsg = (
         <div>
             <h4>Niestety nie mamy w bazie miasta {city}</h4>
         </div>
     )
+
     let weather = null
     if (!error && city) {
         weather = (
@@ -41,12 +40,7 @@ const Result = (props) => {
                 </div>
                 <div className='box' >
                     <div className="box-content" >
-
-
                         {forecasts}
-
-
-
                     </div>
                 </div>
             </div>
