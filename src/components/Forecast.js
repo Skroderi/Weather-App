@@ -12,7 +12,6 @@ const Forecast = (props) => {
                 <div className="tempForecast"> {props.temp} &#8451;</div>
                 <div className="icon"><img src={props.img} alt="zdjęcie obrazujące pogode" /></div>
             </div>
-
         </div>
     );
 }

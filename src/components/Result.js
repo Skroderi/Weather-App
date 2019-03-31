@@ -1,13 +1,14 @@
 import React from 'react';
 import './Result.css';
-
 import Forecast from './Forecast';
 
 const Result = (props) => {
     const { date, city, temp, img, country, humidity, description, pressure, wind, error } = props.data.current[0];
 
+    // create single(3 hours) forecast weather
     const forecasts = props.data.forecast.map((forecast, index) => <Forecast key={index} temp={forecast.main.temp} day={forecast.dt} time={forecast.dt} img={`https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`} />);
 
+    // if any city match to weather base then show error
     const errorMsg = (
         <div>
             <h4>Niestety nie mamy w bazie miasta {city}</h4>
@@ -26,7 +27,6 @@ const Result = (props) => {
                     <div className="temp">
                         <img src={img} alt="zdjęcie obrazujące pogode" />
                         <h1>{temp} &#8451;</h1>
-
                     </div>
                     <p>{description}</p>
                     <div className='parametrs'>
