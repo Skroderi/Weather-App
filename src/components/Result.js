@@ -1,12 +1,20 @@
 import React from 'react';
-import './Result.css'
+import './Result.css';
+
+import Forecast from './Forecast';
 
 const Result = (props) => {
     const { date, city, temp, img, country, humidity, description, pressure, wind, error } = props.data.current[0]
 
-    // const dataa = new Date(props.data.forecast[0].time * 1000).getHours();
-    // console.log(dataa);
 
+
+    const forecasts = props.data.forecast.map(forecast => <Forecast temp={forecast.main.temp} day={forecast.dt} time={forecast.dt} img={`https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`} />)
+
+    const errorMsg = (
+        <div>
+            <h4>Niestety nie mamy w bazie miasta {city}</h4>
+        </div>
+    )
     let weather = null
     if (!error && city) {
         weather = (
@@ -33,55 +41,21 @@ const Result = (props) => {
                 </div>
                 <div className='box' >
                     <div className="box-content" >
-                        <div className="panel">
-                            <div className="hourDay">
-                                <div className="hour">{props.data.forecast[0].time}</div>
-                                <div className="day">{props.data.forecast[0].day}</div>
-                            </div>
-                            <div className="tempForecast"> {props.data.forecast[0].temp} &#8451;</div>
-                            <div className="icon"><img src={props.data.forecast[0].img} alt="zdjęcie obrazujące pogode" /></div>
-                        </div>
-                        <div className="panel">
-                            <div className="hourDay">
-                                <div className="hour">{props.data.forecast[1].time}</div>
-                                <div className="day">{props.data.forecast[1].day}</div>
-                                <div className="tempForecast"> {props.data.forecast[1].temp} &#8451;</div>
-                                <div className="icon"><img src={props.data.forecast[1].img} alt="zdjęcie obrazujące pogode" /></div>
-                            </div>
-                        </div>
-                        <div className="panel">
-                            <div className="hourDay">
-                                <div className="hour">{props.data.forecast[2].time}</div>
-                                <div className="day">{props.data.forecast[2].day}</div>
-                                <div className="tempForecast"> {props.data.forecast[2].temp} &#8451;</div>
-                                <div className="icon"><img src={props.data.forecast[2].img} alt="zdjęcie obrazujące pogode" /></div>
-                            </div>
-                        </div>
-                        <div className="panel">
-                            <div className="hourDay">
-                                <div className="hour">{props.data.forecast[3].time}</div>
-                                <div className="day">{props.data.forecast[3].day}</div>
-                                <div className="tempForecast"> {props.data.forecast[3].temp} &#8451;</div>
-                                <div className="icon"><img src={props.data.forecast[3].img} alt="zdjęcie obrazujące pogode" /></div>
-                            </div>
-                        </div>
-                        <div className="panel">
-                            <div className="hourDay">
-                                <div className="hour">{props.data.forecast[4].time}</div>
-                                <div className="day">{props.data.forecast[4].day}</div>
-                                <div className="tempForecast"> {props.data.forecast[4].temp} &#8451;</div>
-                                <div className="icon"><img src={props.data.forecast[4].img} alt="zdjęcie obrazujące pogode" /></div>
-                            </div>
-                        </div>
+
+
+                        {forecasts}
+
+
 
                     </div>
                 </div>
             </div>
         )
     }
+
     return (
         <>
-            {error ? `Niestety nie mamy w bazie miasta ${city}.` : weather}
+            {error ? errorMsg : weather}
         </>
     )
 }
