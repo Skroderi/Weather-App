@@ -1,8 +1,8 @@
 
 
 input{
-    margin-top:25px;
-    background:  linear-gradient(90deg, rgba(147,123,133,0.4) 4%, rgba(233,172,148,0.4337710084033614) 100%);
+    margin-top:20px;
+    background:  linear-gradient(90deg, rgba(7, 105, 3, 0.7) 4%, rgba(40, 226, 23, 0.734) 100%);
     border-radius: 10%;
     font-size:20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -11,11 +11,11 @@ input{
     font-weight: bold;
     letter-spacing: 2px;    
     padding:5px;
-    border-bottom: 4px solid chocolate
+    border-bottom: 4px solid red
   
 }
 input::placeholder{
-    color:gray;
+    color:rgb(51, 48, 48);
     font-size:20px;
     font-family: Arial, Helvetica, sans-serif
 }

@@ -3,12 +3,11 @@ import './Form.css';
 const Form = (props) => {
     return (
         <>
-            <form onSubmit={props.submit}>
+            <form id="form" onSubmit={props.submit}>
                 <input type="text" value={props.value} onChange={props.change} placeholder="ENTER CITY" />
-                <br />
-                <button>Search</button>
             </form>
-            <button onClick={props.location} className="locationBtn">Get Location</button>
+            <button form="form">Search</button>
+            <button onClick={props.location} className="locationBtn" disabled>Get Location</button>
         </>
     );
 }
