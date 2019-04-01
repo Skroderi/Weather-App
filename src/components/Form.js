@@ -7,7 +7,7 @@ const Form = (props) => {
                 <input type="text" value={props.value} onChange={props.change} placeholder="ENTER CITY" />
             </form>
             <button form="form">Search</button>
-            <button onClick={props.location} className="locationBtn" disabled>Get Location</button>
+            <button onClick={props.location} className="locationBtn" disabled={props.isButtonDisabled}>Get Location</button>
         </>
     );
 }
