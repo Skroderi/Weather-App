@@ -10,7 +10,7 @@ const Result = (props) => {
 
     // if any city match to weather base then show error
     const errorMsg = (
-        <div>
+        <div className="error">
             <h4>Niestety nie mamy w bazie miasta {city}</h4>
         </div>
     )
